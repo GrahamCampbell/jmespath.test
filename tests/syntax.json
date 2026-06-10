@@ -688,5 +688,23 @@
           "result": [null]
         }
     ]
+  },
+  {
+    "comment": "Invalid tokens after a complete expression",
+    "given": {"type": "object"},
+    "cases": [
+        {
+          "expression": "avg([].size)+",
+          "error": "syntax"
+        },
+        {
+          "expression": "foo[]+",
+          "error": "syntax"
+        },
+        {
+          "expression": "a = b",
+          "error": "syntax"
+        }
+    ]
   }
 ]
